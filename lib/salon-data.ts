@@ -1,16 +1,17 @@
 export const SALON = {
-  name: "Classic Barbers Ashford",
-  phoneDisplay: "01784 278542",
-  phoneHref: "tel:01784278542",
-  address: "4 Church Rd, Ashford TW15 2UT",
-  facebook: "https://www.facebook.com/classicbarbersashford/?locale=en_GB",
-  mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.65363402444!2d-0.46794652233682973!3d51.43467557179471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487679af27064059%3A0xc5c14d3267c8753e!2sClassic%20Barbers%20Ashford!5e0!3m2!1sen!2suk!4v1718820000000!5m2!1sen!2suk",
-  mapsLink: "https://www.google.com/maps/place/Classic+Barbers+Ashford/@51.4346723,-0.4653716,17z/data=!3m1!4b1!4m6!3m5!1s0x487679af27064059:0xc5c14d3267c8753e!8m2!3d51.4346723!4d-0.4653716!16s%2Fg%2F11wdbttx3r?entry=ttu",
+  name: "Scissors & Razors Barbers",
+  phoneDisplay: "01784 558634",
+  phoneHref: "tel:01784558634",
+  address: "12 Station Rd, Ashford TW15 2UP",
+  facebook: "https://www.facebook.com/p/Scissors-Razors-100063553870832/",
+  instagram: "https://www.instagram.com/scissorsandrazor/",
+  bookingLink: "https://booksy.com/en-gb/30127_scissors-razors_barber_968775_ashford",
 } as const
 
 export const HOURS = [
-  { day: "Monday – Saturday", time: "9:00 AM – 7:00 PM" },
-  { day: "Sunday", time: "9:30 AM – 5:00 PM" },
+  { day: "Monday – Friday", time: "9:00 AM – 7:00 PM" },
+  { day: "Saturday", time: "9:00 AM – 6:00 PM" },
+  { day: "Sunday", time: "10:00 AM – 5:00 PM" },
 ] as const
 
 export type Service = {
@@ -28,23 +29,27 @@ export type ServiceCategory = {
 
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
-    id: "barbering",
-    label: "Barbering & Styling",
-    blurb: "Sharp cuts and classic styling tailored exactly to your preferences.",
+    id: "haircuts",
+    label: "Haircuts & Fades",
+    blurb: "Precise, sharp styling and modern cuts crafted by industry professionals.",
     services: [
-      { name: "Men's Haircut", duration: "30 mins", price: "£18" },
-      { name: "Skin Fade", duration: "45 mins", price: "£22" },
-      { name: "Scissor Cut", duration: "30 mins", price: "£20" },
+      { name: "Dry Haircut", duration: "35 mins", price: "£17" },
+      { name: "Skin Fade", duration: "35 mins", price: "£19" },
+      { name: "Taper Fade", duration: "45 mins", price: "£19" },
+      { name: "Haircut & Wash", duration: "30 mins", price: "£20" },
+      { name: "Kids Haircut (With toy car seat)", duration: "30 mins", price: "£15" },
     ],
   },
   {
-    id: "shaves-trims",
-    label: "Beard & Shaves",
-    blurb: "Traditional hot towel shaves and clean line outlines.",
+    id: "shaves-grooming",
+    label: "Beards & Shaves",
+    blurb: "Traditional grooming treatments, crisp edges, and hot towel relaxation.",
     services: [
-      { name: "Beard Trim", duration: "20 mins", price: "£10" },
-      { name: "Hot Towel Shave", duration: "35 mins", price: "£20" },
-      { name: "Head Shave", duration: "25 mins", price: "£15" },
+      { name: "Gents Haircut & Beard Grooming (+ Free Hot Towel)", duration: "45 mins", price: "£32" },
+      { name: "Hot Towel Shave", duration: "30 mins", price: "£15" },
+      { name: "Beard Trim", duration: "20 mins", price: "£13" },
+      { name: "Traditional Shave", duration: "20 mins", price: "£11" },
+      { name: "Hair Colouring", duration: "40 mins", price: "£35" },
     ],
   },
 ]
@@ -66,24 +71,24 @@ export const GALLERY = [
 
 export const REVIEWS = [
   {
-    name: "Bruno Pereira",
-    text: "I was lucky enough to catch Arde at The Classic Barbers just as he was closing, and he still kindly accepted me for a last-minute haircut and beard trim. The service was top-notch full attention to detail, great conversation, and a perfect cut.",
+    name: "Ravi Sharma",
+    text: "Great cut and shave. Really took precision and done well skin fade. My boys haircut was great day before also they have the car seat so keeps him entertained. Recommended thanks guys.",
   },
   {
-    name: "Darren Tyler",
-    text: "Hands down the best barbershop in town! I’ve been to a lot of barbers, but this place stands out for all the right reasons. The atmosphere is welcoming, clean, and professional. The barbers really pay attention.",
+    name: "Adam",
+    text: "Best barbershop I have been to so far. Very precise and professional. Highly recommended.",
   },
   {
-    name: "Ryan Fernandes",
-    text: "I’m really very satisfied with my experience at Classic Barbers. The staff are friendly and welcoming, especially the owner, who is very accommodating and professional. He gave great suggestions for a haircut that suited me well.",
+    name: "Amin Zaeim",
+    text: "I’ve been going there for the past five years. Am quite happy to continue going there each time I need a haircut. The boss is an excellent barber who knows what cut suits you best.",
   },
   {
-    name: "Hajar Salehi",
-    text: "First time being at classic Barber before my son getting a haircut I let them know my son is very sensitive with the clipper. They cut his hair with scissors and my boy loves the haircut, he’s gassed up to get a haircut here.",
+    name: "MK",
+    text: "The vibes are amazing, the guys are great. Hospitable, they offer drinks as well. It was not easy to find good barbers around. But at last I found them. ❤️",
   },
   {
-    name: "Peerzada Ovais",
-    text: "Best haircut and beard trim I’ve had in the UK. Great experience at Classic Barbers Ashford. Big thanks to Ardie - very skilled, professional, and paid great attention to detail. Left feeling fresh and confident.",
+    name: "Sam Pritchard",
+    text: "Been going here for a few years now, the guys are so good, look after children really well too. Always a pleasure having my family in the shop.",
   },
 ]
 
