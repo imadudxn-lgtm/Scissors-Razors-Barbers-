@@ -1,10 +1,20 @@
-import { Phone, MapPin, Instagram } from "lucide-react"
+import { Phone, MapPin } from "lucide-react"
 import { SALON, HOURS, NAV_LINKS } from "@/lib/salon-data"
 
 function FacebookIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
       <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  )
+}
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
     </svg>
   )
 }
@@ -39,7 +49,7 @@ export function SiteFooter() {
                 aria-label={`${SALON.name} on Instagram`}
                 className="inline-flex size-10 items-center justify-center rounded-full border border-border text-foreground transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
               >
-                <Instagram className="size-5" />
+                <InstagramIcon className="size-5" />
               </a>
             </div>
           </div>
@@ -98,7 +108,7 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 text-center text-xs text-muted-foreground sm:flex-row sm:text-left">
           <p>
-            &copy; {new Date().getFullYear()} {SALON.name}. All rights reserved.
+            © {new Date().getFullYear()} {SALON.name}. All rights reserved.
           </p>
           <p>{SALON.address}</p>
         </div>
