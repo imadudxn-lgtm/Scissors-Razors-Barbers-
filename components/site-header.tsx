@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { useEffect, useState } from "react"
-import { Phone, Menu, X } from "lucide-react"
+import { CalendarRange, Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { NAV_LINKS, SALON } from "@/lib/salon-data"
 
@@ -47,14 +47,16 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        {/* Call to book */}
+        {/* Book online action */}
         <div className="flex items-center gap-2">
           <a
-            href={SALON.phoneHref}
+            href={SALON.bookingLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-300 hover:opacity-90 hover:shadow-md sm:inline-flex"
           >
-            <Phone className="size-4" aria-hidden="true" />
-            Call to Book
+            <CalendarRange className="size-4" aria-hidden="true" />
+            Book Online
           </a>
           <button
             type="button"
@@ -83,11 +85,13 @@ export function SiteHeader() {
               </a>
             ))}
             <a
-              href={SALON.phoneHref}
+              href={SALON.bookingLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             >
-              <Phone className="size-4" aria-hidden="true" />
-              Call to Book
+              <CalendarRange className="size-4" aria-hidden="true" />
+              Book Online
             </a>
           </nav>
         </div>
