@@ -1,4 +1,4 @@
-import { MapPin, Bus, TrainFront, Phone, Clock } from "lucide-react"
+import { MapPin, Bus, TrainFront, CalendarContainer, Clock } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 import { SALON, HOURS } from "@/lib/salon-data"
 
@@ -14,8 +14,7 @@ export function LocationSection() {
             Where to Find Us
           </h2>
           <p className="mt-3 text-muted-foreground text-pretty">
-            Right on Church Road in Ashford — pop in for a walk-in or call
-            ahead to check availability.
+            Located right on Station Road in Ashford — grab an open slot online or drop in anytime.
           </p>
         </Reveal>
 
@@ -31,7 +30,7 @@ export function LocationSection() {
                   <h3 className="font-serif text-lg font-semibold">Our Address</h3>
                   <p className="mt-1 text-muted-foreground">{SALON.address}</p>
                   <a
-                    href="https://maps.google.com/?q=Classic+Barbers+Ashford+4+Church+Rd+Ashford+TW15+2UT"
+                    href="https://maps.google.com/?q=12+Station+Rd,+Ashford+TW15+2UP"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-2 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline"
@@ -49,16 +48,16 @@ export function LocationSection() {
               </h3>
               <ul className="mt-3 space-y-2.5 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2.5">
-                  <Bus className="mt-0.5 size-4 shrink-0 text-primary/70" aria-hidden="true" />
-                  Several local bus routes stop along Church Road and the high street, just a short walk away.
+                  <TrainFront className="mt-0.5 size-4 shrink-0 text-primary/70" aria-hidden="true" />
+                  Incredibly close to Ashford (Surrey) railway station — literally just a short walk up the street.
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <TrainFront className="mt-0.5 size-4 shrink-0 text-primary/70" aria-hidden="true" />
-                  Ashford (Surrey) railway station is a few minutes away by car or a pleasant walk.
+                  <Bus className="mt-0.5 size-4 shrink-0 text-primary/70" aria-hidden="true" />
+                  Main local bus lines run directly through Station Road with drop-off stops near our storefront.
                 </li>
                 <li className="flex items-start gap-2.5">
                   <MapPin className="mt-0.5 size-4 shrink-0 text-primary/70" aria-hidden="true" />
-                  Street and nearby car parking available, just steps from the barbershop.
+                  Convenient street parking spots and local public parking options surround the block.
                 </li>
               </ul>
             </div>
@@ -77,21 +76,22 @@ export function LocationSection() {
                 ))}
               </dl>
               <a
-                href={SALON.phoneHref}
+                href={SALON.bookingLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity duration-300 hover:opacity-90"
               >
-                <Phone className="size-4" aria-hidden="true" />
-                Call to Check Availability — {SALON.phoneDisplay}
+                Book Your Appointment on Booksy
               </a>
             </div>
           </Reveal>
 
-          {/* Map Section - Hardcoded direct URL layout to guarantee loading */}
+          {/* Map Section */}
           <Reveal delay={100} className="min-h-80">
             <div className="h-full overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
               <iframe
-                title="Map showing Classic Barbers Ashford location layout"
-                src="https://maps.google.com/maps?q=Classic%20Barbers%20Ashford%204%20Church%20Rd%20Ashford%20TW15%202UT&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                title="Map showing Scissors & Razors Barbers location"
+                src="https://maps.google.com/maps?q=12%20Station%20Rd,%20Ashford%20TW15%202UP&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 className="h-full min-h-[450px] w-full"
                 style={{ border: 0 }}
                 loading="lazy"
