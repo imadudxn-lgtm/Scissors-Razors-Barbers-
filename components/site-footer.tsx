@@ -1,4 +1,4 @@
-import { Phone, MapPin } from "lucide-react"
+import { Phone, MapPin, Instagram } from "lucide-react"
 import { SALON, HOURS, NAV_LINKS } from "@/lib/salon-data"
 
 function FacebookIcon({ className }: { className?: string }) {
@@ -20,7 +20,7 @@ export function SiteFooter() {
               {SALON.name}
             </span>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              A premium barbershop in Ashford. Walk-ins welcome and traditional grooming appointments available.
+              A premium barbershop in Ashford. Sharp cuts, skin fades, and expert traditional grooming treatments.
             </p>
             <div className="mt-5 flex items-center gap-3">
               <a
@@ -31,6 +31,15 @@ export function SiteFooter() {
                 className="inline-flex size-10 items-center justify-center rounded-full border border-border text-foreground transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
               >
                 <FacebookIcon className="size-5" />
+              </a>
+              <a
+                href={SALON.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${SALON.name} on Instagram`}
+                className="inline-flex size-10 items-center justify-center rounded-full border border-border text-foreground transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
+              >
+                <Instagram className="size-5" />
               </a>
             </div>
           </div>
@@ -63,7 +72,7 @@ export function SiteFooter() {
               </li>
               <li className="flex items-start gap-2 text-muted-foreground">
                 <a 
-                  href={SALON.mapsLink}
+                  href="https://maps.google.com/?q=12+Station+Rd,+Ashford+TW15+2UP"
                   target="_blank"
                   rel="noopener noreferrer" 
                   className="inline-flex items-start gap-2 transition-colors hover:text-primary"
