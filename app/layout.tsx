@@ -15,9 +15,9 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Head Partners | Hair Salon in Ashford, TW15",
+  title: "Scissors & Razors Barbers | Barbershop in Ashford, TW15",
   description:
-    "Head Partners — a friendly high-street hair salon in Ashford. Precision hair cuts, creative styling, coloring, highlights & perms. Walk-ins welcome & appointments available. Call 01784 255267.",
+    "Scissors & Razors Barbers — a premium high-street barbershop on Station Road in Ashford. Precision haircuts, sharp skin fades, and traditional hot towel beard trims. Book online instantly via Booksy.",
   generator: 'v0.app',
   icons: {
     icon: [
